@@ -1,0 +1,93 @@
+
+.container {
+background-color: $color-grey-light-2;
+box-shadow: $shadow-dark; 
+margin: 8rem auto;
+max-width: 120rem;
+min-height: 50rem;
+
+    @include respond (tab-land) {
+        margin: 0;  
+        max-width: 100%;
+        width: 100%; 
+    }
+} 
+
+.header {
+    font-size: 1.4rem;
+    height: 7rem;
+    background-color: #fff;
+    border-bottom: $line; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include respond (phone) {
+        flex-wrap: wrap;
+        height: 15rem;
+        align-content: space-around; 
+    }
+}
+
+.content {
+    display: flex; 
+
+    @include respond (tab-port) {
+        flex-direction: column;
+    }
+}
+
+.side-bar {
+    background-color: $color-grey-dark-1; 
+    flex: 0 0 18%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.hotel-view {
+    background-color: #fff;
+    flex: 1; 
+}
+
+.detail {
+    display: flex;
+    padding: 4.5rem;
+    background-color: $color-grey-light-1;
+    border-bottom: $line;
+    font-size: 1.4rem;
+
+    @include respond (tab-port) {
+        padding: 3rem;
+    }
+
+    @include respond (phone) {
+        flex-direction: column; 
+    } 
+}
+
+.description {
+    flex: 0 0 60%;
+    margin-right: 4.5rem;
+    padding: 3rem; 
+    background-color: #fff;
+    box-shadow: $shadow-light;
+
+    @include respond (tab-port) {
+        padding: 2rem;
+        margin-right: 3rem;      
+    }
+
+    @include respond (phone) {
+        margin-right: 0;
+        margin-bottom: 3rem;  
+    }
+}
+
+.user-reviews {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
